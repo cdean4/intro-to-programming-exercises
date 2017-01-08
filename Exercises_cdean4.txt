@@ -1,0 +1,655 @@
+# Intro to programming #
+
+# PREPARATIONS - EXERCISES #
+# Q1 #
+~$ mkdir my_folder
+~$ cd my_folder
+~/my_folder$ touch one.rb
+~/my_folder$ touch two.rb
+~/my_folder$ ruby one.rb
+this is file one
+~/my_folder$ ls
+one.rb two.rb
+~/my_folder$ ruby two.rb
+This is file two
+
+# Q2 #
+~/my_folder$ cd
+~$ rm -R my_folder
+******************************************
+
+#BASICS - EXERCISES
+
+# Q1 #
+~$ irb
+2.2.1 :001 > "Chanda" + " Dean"
+ => "Chanda Dean" 
+
+# Q2 #
+2.2.1 :003 > num = [5,6,7,8][3]
+ => 8 
+2.2.1 :004 > num = [5,6,7,8][2]
+ => 7 
+2.2.1 :005 > num = [5,6,7,8][1]
+ => 6 
+2.2.1 :006 > num = [5,6,7,8][0]
+ => 5 
+ 
+# Q3 #
+ 2.2.1 :008 > movies = { Almost_Christmas: 2016, E_T:1981, Taken: 2008 }
+ => {:Almost_Christmas=>2016, :E_T=>1981, :Taken=>2008} 
+2.2.1 :009 > puts movies[:Almost_Christmas]
+2016
+ => nil 
+2.2.1 :010 > puts movies[:Taken]
+2008
+ => nil 
+2.2.1 :011 > puts movies[:E_T]
+1981
+ => nil 
+ 
+ # Q4 #
+ 2.2.1 :012 > years = [2016,1981,2008]
+ => [2016, 1981, 2008] 
+2.2.1 :013 > puts years[0]
+2016
+ => nil 
+2.2.1 :014 > puts years[1]
+1981
+ => nil 
+2.2.1 :015 > puts years[2]
+2008
+ => nil 
+ 
+# Q5 #
+2.2.1 :016 > puts 5*4*3*2*1
+120
+ => nil 
+2.2.1 :017 > puts 6*5*4*3*2*1
+720
+ => nil 
+2.2.1 :018 > puts 7*6*5*4*3*2*1
+5040
+ => nil 
+2.2.1 :019 > puts 8*7*6*5*4*3*2*1
+40320
+ => nil 
+ 
+ # Q6 #
+ 2.2.1 :020 > puts 15.0 *15.0
+225.0
+ => nil 
+2.2.1 :021 > puts 32.2*32.2
+1036.8400000000001
+ => nil 
+2.2.1 :022 > puts 7.3*7.3
+53.29
+ => nil 
+ 
+ # Q7 #
+ You need to close a bracket somewhere in your code.
+  
+  
+# VARIABLES - EXERCISES # 
+# Q1 #
+2.2.1 :023 > puts "Hi there! What's your name?"
+Hi there! What's your name?
+ => nil 
+2.2.1 :024 > name = gets.chomp
+puts "Hello " + name
+ => "puts \"Hello \" + name"  
+ 
+ # Q2 #
+2.2.1 :025 > puts "How old are you?"
+How old are you?
+ => nil 
+2.2.1 :026 > age = gets.chomp.to_i
+puts "In 10 years you will be:"
+puts age +  10
+puts "In 20 years you will be:"
+puts age +  20
+puts "In 30 years you will be:"
+puts age +  30
+puts "In 40 years you will be:"
+puts age +  40 => 0 
+2.2.1 :027 > puts age +  10
+10
+ => nil 
+2.2.1 :028 > puts "In 20 years you will be:"
+In 20 years you will be:
+ => nil 
+2.2.1 :029 > puts age +  20
+20
+ => nil 
+2.2.1 :030 > puts "In 30 years you will be:"
+In 30 years you will be:
+ => nil 
+2.2.1 :031 > puts age +  30
+30
+ => nil 
+2.2.1 :032 > puts "In 40 years you will be:"
+In 40 years you will be:
+ => nil 
+2.2.1 :033 > puts age +  40
+40
+ => nil 
+ 
+# Q3 #
+2.2.1 :034 > 10.times do
+2.2.1 :035 >     puts name
+2.2.1 :036?>   end
+puts "Hello " + name
+puts "Hello " + name
+puts "Hello " + name
+puts "Hello " + name
+puts "Hello " + name
+puts "Hello " + name
+puts "Hello " + name
+puts "Hello " + name
+puts "Hello " + name
+puts "Hello " + name
+ => 10 
+ 
+# Q4 #
+2.2.1 :037 > puts "What is your first name?"
+What is your first name?
+ => nil 
+2.2.1 :038 > first_name = gets.chomp
+puts "Thank you. What is your last name?"
+last_name = gets.chomp
+puts "Your full name is " + first_name + " " + last_name  
+puts "Your full name is " + first_name + " " + last_name 
+ => "puts \"Your full name is \" + first_name + \" \" + last_name " 
+
+# Q5 #
+3 is printed to the screen in both cases. No errors were returned.
+
+# Q6 #
+The variable shoes has not been defined so it cannot be used.
+
+
+# METHODS - EXERCISES #
+# Q1 #
+2.2.1 :051 > def greeting(name)
+2.2.1 :052?>     "Hello, " + name + ". How are you doing?"
+2.2.1 :053?>   end
+ => :greeting 
+2.2.1 :054 >   puts greeting("Chanda")
+Hello, Chanda. How are you doing?
+ => nil 
+
+# Q2 #
+2.2.1 :056 > x = 2
+ => 2 
+2.2.1 :057 > puts x = 2
+2
+ => nil 
+2.2.1 :058 > p name = "Joe"
+"Joe"
+ => "Joe" 
+2.2.1 :059 > four = "four"
+ => "four" 
+2.2.1 :060 > print something = "nothing"
+nothing => nil 
+2.2.1 :061 > 
+
+# Q3 #
+2.2.1 :069 > def multiply(x, y)
+2.2.1 :070?>   x*y
+2.2.1 :071?>   end
+ => :multiply 
+2.2.1 :072 > puts multiply(7,3)
+21
+ => nil 
+ 
+# Q4 #
+Nothing was printed to the screen.
+ 
+# Q5 #
+.2.1 :082 > def scream(words)
+2.2.1 :083?> words = words + "!!!!"
+2.2.1 :084?> puts words
+2.2.1 :085?> end
+ => :scream 
+2.2.1 :086 >     scream("Yippeee")
+Yippeee!!!!
+ => nil 
+
+# Q6 #
+The method did not have the right number of arguments needed to function.
+
+
+# FLOW CONTROL - EXERCISES # 
+# Q1 #
+2.2.1 :089 > (32 * 4) >= 129
+ => false 
+2.2.1 :090 > false != !true
+ => false 
+2.2.1 :091 > true == 4
+ => false 
+2.2.1 :092 > false == (847 == '874')
+ => true 
+2.2.1 :093 > (!true || (!(100 / 5) == 20) || ((328 / 4) == 82)) || false
+ => true 
+
+# Q2 #
+2.2.1 :108 >   def caps(string)
+2.2.1 :109?>     if string.length > 10
+2.2.1 :110?>         string.upcase
+2.2.1 :111?>       else
+2.2.1 :112 >           string
+2.2.1 :113?>       end
+2.2.1 :114?>   end
+ => :caps 
+2.2.1 :115 > 
+2.2.1 :116 >   puts caps("Joe Smith")
+Chanda Dean
+ => nil 
+2.2.1 :117 > puts caps("Chanda Dean")
+CHANDA DEAN
+ => nil 
+
+# Q3 #
+2.2.1 :094 > puts "Please enter a number between 0 and 100."
+2.2.1 :095 > number = gets.chomp.to_i
+
+if number < 0
+  puts "#{number} is less than 0"
+elsif number <= 50
+  puts "#{number} is less than 50"
+elsif number <= 100
+  puts "#{number} is greater than 50"
+else
+  puts "#{number} is above 100"
+end => 0 
+2.2.1 :096 > if number < 0
+2.2.1 :097?>     puts "#{number} is less than 0"
+2.2.1 :098?>   elsif number <= 50
+2.2.1 :099?>     puts "#{number} is less than 50"
+2.2.1 :100?>   elsif number <= 100
+2.2.1 :101?>     puts "#{number} is greater than 50"
+2.2.1 :102?>   else
+2.2.1 :103 >       puts "#{number} is above 100"
+2.2.1 :104?>   end
+0 is less than 50
+ => nil 
+ 
+# Q4 #
+The code returned FALSE, Did you get it right?, Alright now!
+
+# Q5 #
+
+# Q6 #
+You need to add 'end' to the code.
+
+# LOOPS AND INTERATIONS - EXERCISES #
+# Q1 #
+  It returns [1, 2, 3, 4, 5] 
+  
+# Q2 #
+2.2.1 :134 > while x != "STOP" do
+2.2.1 :135 >       puts "What's the time?"
+2.2.1 :136?>     ans = gets.chomp
+2.2.1 :137?>     puts "Hello?"
+2.2.1 :138?>     x = gets.chomp
+2.2.1 :139?>   end
+
+# Q3 #
+
+# Q4 #
+2.2.1 :161 > def count_to_zero(number)
+2.2.1 :162?>     if number <= 0
+2.2.1 :163?>         puts number
+2.2.1 :164?>       else
+2.2.1 :165 >           puts number
+2.2.1 :166?>         count_to_zero(number-1)
+2.2.1 :167?>       end
+2.2.1 :168?>   end
+ => :count_to_zero 
+2.2.1 :169 > 
+2.2.1 :170 >   count_to_zero(10)
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+ => nil 
+2.2.1 :171 > count_to_zero(12)
+12
+11
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+ => nil 
+2.2.1 :172 > count_to_zero(-2)  
+-2
+ => nil 
+
+# ARRAYS - EXERCISES #
+# Q1 #
+2.2.1 :001 > arr = [1,3,5,7,9,11]
+ => [1, 3, 5, 7, 9, 11] 
+2.2.1 :002 > arr.include?(3)
+ => true 
+
+# Q2 #
+#part-1#
+2.2.1 :003 > arr = ["b", "a"]
+ => ["b", "a"] 
+2.2.1 :004 > arr = arr.product(Array(1..3))
+ => [["b", 1], ["b", 2], ["b", 3], ["a", 1], ["a", 2], ["a", 3]] 
+2.2.1 :005 >    arr.first.delete(arr.first.last)
+ => 1 
+ 
+#part-2#
+2.2.1 :006 > arr = ["b", "a"]
+ => ["b", "a"] 
+2.2.1 :007 >    arr = arr.product([Array(1..3)])
+ => [["b", [1, 2, 3]], ["a", [1, 2, 3]]] 
+2.2.1 :008 >    arr.first.delete(arr.first.last)
+ => [1, 2, 3] 
+ 
+# Q3 #
+2.2.1 :009 > arr = [["test", "hello", "world"],["example", "mem"]]
+ => [["test", "hello", "world"], ["example", "mem"]] 
+2.2.1 :010 > arr.last.first
+ => "example" 
+ 
+# Q4 #
+2.2.1 :011 > arr = [15, 7, 18, 5, 12, 8, 5, 1]
+ => [15, 7, 18, 5, 12, 8, 5, 1] 
+2.2.1 :012 > arr.index(5)
+ => 3 
+2.2.1 :013 > arr.index[5]
+NoMethodError: undefined method `[]' for #<Enumerator: [15, 7, 18, 5, 12, 8, 5, 1]:index>
+	from (irb):13
+	from /Users/Chanda/.rvm/rubies/ruby-2.2.1/bin/irb:11:in `<main>'
+2.2.1 :014 > arr[5]
+ => 8 
+
+# Q5 #
+2.2.1 :015 > string = "Welcome to America!"
+ => "Welcome to America!" 
+2.2.1 :016 > a = string[6]
+ => "e" 
+2.2.1 :017 > a = string[11]
+ => "A" 
+2.2.1 :018 > a = string[19]
+ => nil 
+
+# Q6 #
+For that code, you were supposed to use the index for "margaret' instead of the string 'margaret'. It should be names[3] = 'jody'.
+
+# Q7 #
+2.2.1 :011 > arr1 = [1,4,9,16]
+ => [1, 4, 9, 16] 
+2.2.1 :012 > arr2 = arr1.map { |x| x+2 }
+ => [3, 6, 11, 18] 
+2.2.1 :013 > p arr1
+ => [1, 4, 9, 16] 
+2.2.1 :014 > p arr2
+ => [3, 6, 11, 18] 
+****************************************************************
+
+# HASHES - EXERCISES #
+
+# Q1 #
+2.2.1 :024 > family = {  uncles: ["bob", "joe", "steve"], sisters: ["jane", "jill", "beth"], brothers: ["frank","rob","david"],aunts: ["mary","sally","susan"]}
+ => {:uncles=>["bob", "joe", "steve"], :sisters=>["jane", "jill", "beth"], :brothers=>["frank", "rob", "david"], :aunts=>["mary", "sally", "susan"]} 
+2.2.1 :026 > siblings = family.select{|k,v| k==:sisters || k==:brothers}
+ => {:sisters=>["jane", "jill", "beth"], :brothers=>["frank", "rob", "david"]} 
+2.2.1 :027 > siblings
+ => {:sisters=>["jane", "jill", "beth"], :brothers=>["frank", "rob", "david"]} 
+
+# Q2 #
+merge combines two hashes but leaves the original hash unchanged. merge! deletes the original hash and replaces it with the merged hash.
+
+2.2.1 :033 > comp_colors = {one: ['red', 'green'], two: ['yellow','purple'], three: ['blue', 'orange']}
+ => {:one=>["red", "green"], :two=>["yellow", "purple"], :three=>["blue", "orange"]} 
+2.2.1 :035 > comp_colors.delete(:three)
+ => ["blue", "orange"] 
+2.2.1 :036 > comp_colors
+ => {:one=>["red", "green"], :two=>["yellow", "purple"]} 
+2.2.1 :038 > not_comp = { four: ['white', 'black']}
+ => {:four=>["white", "black"]} 
+2.2.1 :039 > comp_colors.merge!(not_comp)
+ => {:one=>["red", "green"], :two=>["yellow", "purple"], :four=>["white", "black"]} 
+2.2.1 :040 > comp_colors
+ => {:one=>["red", "green"], :two=>["yellow", "purple"], :four=>["white", "black"]} 
+
+
+# Q3 #
+2.2.1 :061 > comp_colors = {one: ['red', 'green'], two: ['yellow','purple'], three: ['blue', 'orange']}
+ => {:one=>["red", "green"], :two=>["yellow", "purple"], :three=>["blue", "orange"]} 
+2.2.1 :062 > comp_colors.each_key {|key|puts key}
+one
+two
+three
+ => {:one=>["red", "green"], :two=>["yellow", "purple"], :three=>["blue", "orange"]} 
+2.2.1 :063 > comp_colors.each_value { |value| puts value }
+red
+green
+yellow
+purple
+blue
+orange
+ => {:one=>["red", "green"], :two=>["yellow", "purple"], :three=>["blue", "orange"]} 
+2.2.1 :064 > comp_colors.each { |key, value| puts "The number #{key} complementary color pair is #{value}" }
+The number one complementary color pair is ["red", "green"]
+The number two complementary color pair is ["yellow", "purple"]
+The number three complementary color pair is ["blue", "orange"]
+ => {:one=>["red", "green"], :two=>["yellow", "purple"], :three=>["blue", "orange"]} 
+
+# Q4 #
+2.2.1 :071 >   person = {name: 'Bob', occupation: 'web developer', hobbies: 'painting'}
+ => {:name=>"Bob", :occupation=>"web developer", :hobbies=>"painting"} 
+2.2.1 :072 > person[:name]
+ => "Bob" 
+
+# Q5 #
+You could use has_value?
+
+2.2.1 :065 > comp_colors
+ => {:one=>["red", "green"], :two=>["yellow", "purple"], :three=>["blue", "orange"]} 
+2.2.1 :066 > comp_colors.has_value?("pink")
+ => false
+
+# Q6 #
+
+# Q7 #
+my_hash uses x as the key.
+my_hash2 uses the string value of  'x' as the key.
+
+# Q8 #
+B. There is no method called keys for Array objects.
+*******************************************************
+
+# MORE STUFF - EXERCISES #
+# Q1 #
+2.2.1 :081 > def has_a_lab?(string)
+2.2.1 :082?>   if string =~ /lab/
+2.2.1 :083?>     puts "Eureka! It's a lab!"
+2.2.1 :084?>     else
+2.2.1 :085 >       puts "Oops! No lab here."
+2.2.1 :086?>     end
+2.2.1 :087?>   end
+ => :has_a_lab? 
+2.2.1 :088 > has_a_lab?("laboratory")
+Eureka! It's a lab!
+ => nil 
+2.2.1 :089 > has_a_lab?("experiment")
+Oops! No lab here.
+ => nil 
+2.2.1 :090 > has_a_lab?("Pans Labyrinth")
+Oops! No lab here.
+ => nil 
+2.2.1 :091 > has_a_lab?("elaborate")
+Eureka! It's a lab!
+ => nil 
+2.2.1 :092 > has_a_lab?("polar bear")
+Oops! No lab here.
+ => nil 
+
+# Q2 #
+Nothing was printed to the screen.  => #<Proc:0x007ff6d1834f30@(irb):98> 
+was returned.
+
+# Q3 #
+Exception handling helps prevent issues with running code when unforseen circumstances present themselves
+
+# Q4 #
+def execute(&block)
+  block.call
+end
+
+execute { puts "Hello from inside the execute method!" }
+
+# Q5 #
+It should read 'def execute(&block)' on the first line of code. Need to include '&' 5o make block a parameter.
+*******************************************************************
+
+#FINAL EXERCISES#
+# Q1 #
+2.2.1 :104 > var = [1,2,3,4,5,6,7,8,9,10]
+ => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+2.2.1 :105 > var.each { |number| puts number }
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+ => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+
+# Q2 #
+2.2.1 :106 > var.each {|number| puts number if number > 5}
+6
+7
+8
+9
+10
+ => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+ 
+# Q3 #
+2.2.1 :109 > new_array =var.select { |number| number % 2 != 0 }
+ => [1, 3, 5, 7, 9] 
+
+# Q4 #
+2.2.1 :110 > var.push(11)
+ => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] 
+2.2.1 :111 > var.unshift(0)
+ => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] 
+
+# Q5 #
+2.2.1 :112 > var.pop
+ => 11 
+2.2.1 :113 > var.push(3)
+ => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 3] 
+ 
+# Q6 #
+2.2.1 :114 > de_dup= var.uniq!
+ => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+ 
+# Q7 #
+An array is like a single row matrix with individual entries. A hash is a pair of entries with a key and a value.
+
+# Q8 #
+old syntax = {:key = > 'value'}
+new syntax = {key: 'value'}
+
+# Q9 #
+2.2.1 :115 > h = {a:1, b:2, c:3, d:4}
+ => {:a=>1, :b=>2, :c=>3, :d=>4} 
+2.2.1 :116 > h[:b]
+ => 2 
+2.2.1 :117 > h[:e]=5
+ => 5 
+2.2.1 :118 >   h.delete_if { |k, v| v < 3.5 }
+ => {:d=>4, :e=>5} 
+
+# Q10 #
+Yes hash values can be arrays since one key can be assigned to several values e.g var = {ice_cream: ['chocolate','vanilla','strawberry']}. An array can be made up of multiple hashes e.g. flavors = [{ice_cream:'chocolate'}, {ice_cream:'vanilla'}, {ice_cream:'strawberry'}]
+
+# Q11 #
+I like Github since you can get feedback on the APIs and any quirks to look out for. You also get linked to other sources for APIs that you may never have come across on your own.
+
+# Q12 #
+2.2.1 :120 >   contact_data = [["joe@email.com", "123 Main st.", "555-123-4567"],
+2.2.1 :121 >                 ["sally@email.com", "404 Not Found Dr.", "123-234-3454"]]
+ => [["joe@email.com", "123 Main st.", "555-123-4567"], ["sally@email.com", "404 Not Found Dr.", "123-234-3454"]] 
+2.2.1 :122 > 
+2.2.1 :123 >   contacts = {"Joe Smith" => {}, "Sally Johnson" => {}}
+ => {"Joe Smith"=>{}, "Sally Johnson"=>{}} 
+2.2.1 :124 > contacts["Joe Smith"][:email] = contact_data[0][0]
+ => "joe@email.com" 
+2.2.1 :125 > contacts["Joe Smith"][:address] = contact_data[0][1]
+ => "123 Main st." 
+2.2.1 :126 > contacts["Joe Smith"][:phone] = contact_data[0][2]
+ => "555-123-4567" 
+2.2.1 :127 > contacts["Sally Johnson"][:email] = contact_data[1][0]
+ => "sally@email.com" 
+2.2.1 :128 > contacts["Sally Johnson"][:address] = contact_data[1][1]
+ => "404 Not Found Dr." 
+2.2.1 :129 > contacts["Sally Johnson"][:phone] = contact_data[1][2]
+ => "123-234-3454" 
+2.2.1 :150 > contacts
+ => {"Joe Smith"=>{:email=>"joe@email.com", :address=>"123 Main st.", :phone=>"555-123-4567"}, "Sally Johnson"=>{:email=>"sally@email.com", :address=>"404 Not Found Dr.", :phone=>"123-234-3454"}} 
+
+# Q13 #
+2.2.1 :151 > puts "Joe's email: #{contacts["Joe Smith"][:email]}"
+Joe's email: joe@email.com
+ => nil 
+2.2.1 :152 > puts "Sally's phone number: #{contacts["Sally Johnson"][:phone]}"
+Sally's phone number: 123-234-3454
+ => nil 
+
+# Q14 #
+2.2.1 :153 > contact_data = ["joe@email.com", "123 Main st.", "555-123-4567"]
+ => ["joe@email.com", "123 Main st.", "555-123-4567"] 
+2.2.1 :154 > contacts = {"Joe Smith" => {}}
+ => {"Joe Smith"=>{}} 
+2.2.1 :155 > fields = [:email, :address, :phone]
+ => [:email, :address, :phone] 
+2.2.1 :156 > contacts.each do |name, hash|
+2.2.1 :157 > fields.each do |field|
+2.2.1 :158 > hash[field] = contact_data.shift
+2.2.1 :159?> end
+2.2.1 :160?> end
+ => {"Joe Smith"=>{:email=>"joe@email.com", :address=>"123 Main st.", :phone=>"555-123-4567"}} 
+
+# Q15 #
+2.2.1 :165 > var = ['snow', 'winter', 'ice', 'slippery', 'salted roads', 'white trees']
+ => ["snow", "winter", "ice", "slippery", "salted roads", "white trees"] 
+2.2.1 :166 > var.delete_if {|word| word.start_with?("s")}
+ => ["winter", "ice", "white trees"] 
+2.2.1 :167 > var.delete_if {|word| word.start_with?("s", "w")}
+ => ["ice"] 
+ 
+# Q16 #
+2.2.1 :173 > a = ['white snow', 'winter wonderland', 'melting ice','slippery sidewalk', 'salted roads', 'white trees'] 
+ => ["white snow", "winter wonderland", "melting ice", "slippery sidewalk", "salted roads", "white trees"] 
+2.2.1 :174 > a = a.map {|pairs| pairs.split }
+ => [["white", "snow"], ["winter", "wonderland"], ["melting", "ice"], ["slippery", "sidewalk"], ["salted", "roads"], ["white", "trees"]] 
+2.2.1 :175 > a = a.flatten 
+ => ["white", "snow", "winter", "wonderland", "melting", "ice", "slippery", "sidewalk", "salted", "roads", "white", "trees"] 
+
+# Q17 #
+This program outputs "These hashes are the same!"
